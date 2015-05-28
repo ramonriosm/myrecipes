@@ -2,16 +2,17 @@
   <h1>
     Create a new Recipe
   </h1>
-  <hl/>
+  <hr/>
 </p>
 
-<%= if @recipe.errors.any? %>
+<% if @recipe.errors.any? %>
   <div class="row">
     <div class="alert col-md-8 col-md-offset-2">
       <h5>Please correct the following errors:</h5>
       <ul>
-        <% @recipe.errors.full_messages do |msg| %>
-        <li> <%= msg %></li>
+        <% @recipe.errors.full_messages.each do |msg| %>
+          <li> <%= msg %></li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -34,5 +35,4 @@
       <%= f.submit 'Create Recipe', class:"btn btn-success" %>
     <% end %>
   </div>
-  
 </div>

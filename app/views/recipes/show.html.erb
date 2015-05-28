@@ -3,7 +3,7 @@
 </p>
 <div class="row">
   <div class="col-md-4 pull-right center">
-    <%= gravatar_for @recipe.chef, size: 200 %>
+    <%= gravatar_for @recipe.chef, size: 100 %>
     <p>
       <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
     </p>
@@ -21,4 +21,4 @@
   
 </div>
 
-<h5><%= link_to "Return to Recipe Listing", recipes_path, class="btn btn-warning btn-small"%></h5>
+<h5><%= link_to 'Return to Recipe Listing', recipes_path, class:"btn btn-warning btn-small"%></h5>
