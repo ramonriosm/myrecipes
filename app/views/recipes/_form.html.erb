@@ -18,7 +18,17 @@
         <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
       </span>
       
-      <%= f.submit(@recipe.new_record? ? 'Create Recipe': 'Edit Recipe', class:"btn btn-success" %>
+      <%= f.submit(@recipe.new_record? ? 'Create Recipe': 'Edit Recipe', class:"btn btn-success") %>
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $('#recipe_picture').bind('change', function(){
+    size_in_megabytes = this.file[0]/1024/1024;
+    if (size_in_megabytes > 5){
+      alert('Maximun file size is 5MB. Please choose a smaller file');
+    }
+  });
+  
+</script>
