@@ -8,8 +8,27 @@
     <dif class="nav_items">
       <%= link_to "Link 1", "", class: "btn btn-default btn-warning" %>
     </dif>
-    <dif class="nav_items">
-      <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
-    </dif>
+    <% if logged_in? %>
+      <dif class="nav_items">
+        <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
+      </dif>
+      <ul class="nav_items">
+        <li class="dropdown">
+          <%= link_to "#", class: "btn btn-default btn-danger dropdown-toggle","data-toggle" => "dropdown" do %>
+            <%= current_user.chefname %> <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to "View Profile", chef_path(current_user) %></li>
+            <li><%= link_to "Edit Profile", edit_chef_path(current_user) %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Logout", logout_path %></li>
+          </ul>
+        </li>
+      </ul>
+    <% else %>
+      <dif class="nav_items">
+        <%= link_to "Log In", login_path, class: "btn btn-default btn-success" %>
+      </dif>
+    <% end %>
   </dif>
 </header>
