@@ -79,7 +79,7 @@ h2{
 }
 
 .gravatar {
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .well {
@@ -88,9 +88,13 @@ h2{
 
 input, textarea,select, .uneditable-input {
   border: 1px solid #d2d2d2;
-  border-radius:10px;
-  width:100%;
-  margin-bottom:15px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input_checkbox input{
+  width: auto !important;
 }
 
 input {
@@ -98,7 +102,7 @@ input {
 }
 
 span.picture {
-  margin-top:10px;
+  margin-top: 10px;
   input{
     border: 0;
   }
