@@ -180,7 +180,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
-  minitest (~> 5.7.0)
   pg
   pry
   rails (= 4.1.6)
